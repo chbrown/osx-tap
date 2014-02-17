@@ -75,6 +75,10 @@ Then run:
 
     sudo ./key-tap &
 
+Or use the helper bash script, [`key-tap-fork.sh`](key-tap-fork.sh), to fork the process and redirect all output to `/dev/null` (since `sudo` and `&` don't always play nice together):
+
+    sudo key-tap-fork.sh
+
 The log files default to `/var/log/osx-tap/*.log`, where the file name is the epoch ticks when `key-tap` was started.
 
 Each log line has four tab-separated fields:
